@@ -143,6 +143,7 @@
     chromium
   ];
   
+  services.flatpak.enable = true; 
   services.lorri.enable = true;
   services.gnome.gnome-browser-connector.enable = true;
   # Enable systemd networking for wg-quick
