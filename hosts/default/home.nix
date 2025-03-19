@@ -37,6 +37,12 @@
     vesktop
     proton-pass
     deja-dup
+    gnome-tweaks
+    gnomeExtensions.user-themes
+    graphite-gtk-theme
+    orchis-theme
+    materia-theme
+    fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
