@@ -23,9 +23,9 @@
     ripgrep
     unzip
     gnutls
-    nerd-fonts.fira-code  
+    nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
-    nerd-fonts.hack 
+    nerd-fonts.hack
     pandoc
     shellcheck
     nodejs
@@ -44,7 +44,19 @@
     materia-theme
     fastfetch
     brave
+    vscode
   ];
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      ms-python.python
+      ms-toolsai.jupyter
+      ms-azuretools.vscode-docker
+      ms-vscode-remote.vscode-remote-extensionpack
+      ocamllabs.ocaml-platform
+    ];
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
