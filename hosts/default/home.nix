@@ -1,22 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "mattyice";
   home.homeDirectory = "/home/mattyice";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
+  home.stateVersion = "24.11"; 
+  
   home.packages = with pkgs; [
     emacs
     fd
@@ -45,6 +33,8 @@
     fastfetch
     brave
     vscode
+    nil
+    code-cursor
   ];
 
   programs.vscode = {
@@ -58,20 +48,14 @@
     ];
   };
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+  programs.home-manager.enable = true;
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
+  home.sessionVariables = {
+    EDITOR = "vim";
+    PATH = "$HOME/.nix-profile/bin:$PATH";
+  };  
+
+  # Set up the user's shell.
 
   home.file.".bashrc".text = ''
     export PATH="~/.config/emacs/bin/:$PATH"
@@ -100,10 +84,10 @@
     set number
 
     " Highlight cursor line underneath the cursor horizontally.
-    set cursorline
+    " set cursorline
 
     " Highlight cursor line underneath the cursor vertically.
-    set cursorcolumn
+    " set cursorcolumn
 
     " Set shift width to 4 spaces.
     set shiftwidth=4
@@ -308,12 +292,4 @@
 
 
   '';
-
-  home.sessionVariables = {
-    EDITOR = "vim";
-    PATH = "$HOME/.nix-profile/bin:$PATH";
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
