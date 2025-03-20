@@ -59,8 +59,8 @@
   programs.bash = {
   enable = true;
   interactiveShellInit = ''
-    source ${builtins.toString ./dotfiles/bashrc}
-  '';
+    source ${builtins.toString (builtins.path { path = ./dotfiles/bashrc; })}
+    '';
   };
 
   home.file.".bashrc".text = builtins.readFile "${builtins.path { path = ./dotfiles/bashrc; }}";
