@@ -17,7 +17,7 @@
     pandoc
     shellcheck
     nodejs
-    nixfmt
+    nixfmt-classic
     shfmt
     starship
     tmux
@@ -39,7 +39,7 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       ms-python.python
       ms-toolsai.jupyter
       ms-azuretools.vscode-docker
