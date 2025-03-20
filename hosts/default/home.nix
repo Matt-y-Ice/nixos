@@ -55,14 +55,6 @@
     PATH = "$HOME/.nix-profile/bin:$PATH";
   };  
 
-  # Set up the user's shell.
-  programs.bash = {
-  enable = true;
-  interactiveShellInit = ''
-    source ${builtins.toString (builtins.path { path = ./dotfiles/bashrc; })}
-    '';
-  };
-
   home.file.".bashrc".text = builtins.readFile "${builtins.path { path = ./dotfiles/bashrc; }}";
   home.file.".vimrc".text = builtins.readFile "${builtins.path { path = ./dotfiles/vimrc; }}";
 }
