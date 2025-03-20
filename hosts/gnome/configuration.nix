@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports =
@@ -81,9 +81,6 @@
     isNormalUser = true;
     description = "matty ice";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  Managed by home-manager
-    ];
   };
 
   home-manager = {

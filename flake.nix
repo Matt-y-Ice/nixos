@@ -13,12 +13,12 @@
     nixosConfigurations.nix-desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/default/configuration.nix
+        ./hosts/gnome/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.mattyice = import ./hosts/default/home.nix;
+          home-manager.users.mattyice = import ./hosts/gnome/home.nix;
         }
       ];
     };
@@ -26,7 +26,7 @@
     homeConfigurations.mattyice = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./hosts/default/home.nix ];
+      modules = [ ./hosts/gnome/home.nix ];
     };
   };
 }
