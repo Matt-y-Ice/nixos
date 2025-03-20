@@ -131,6 +131,16 @@
     direnv
     lorri
     chromium
+    # Virtualization packages
+    qemu
+    libvirt
+    virt-manager
+    swtpm
+    OVMF
+    dnsmasq
+    bridge-utils
+    usbutils
+    spice
   ];
 
   # Enable Flatpak  
