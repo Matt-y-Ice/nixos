@@ -1,0 +1,4 @@
+export PATH="~/.config/emacs/bin/:$PATH"
+export PATH="/nix/store/ngk3fvkybrdcb20pazrkmf1wp30ab8h3-home-manager/bin:$PATH"
+eval "$(starship init bash)"
+eval "$(direnv hook bash)"
