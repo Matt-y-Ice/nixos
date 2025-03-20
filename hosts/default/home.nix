@@ -57,7 +57,6 @@
 
   # Set up the user's shell.
 
-  home.file.".bashrc".source = ./bashrc;
-
-  home.file.".vimrc".source = ./vimrc;
+  home.file.".bashrc".text = builtins.readFile "${builtins.path { path = ./bashrc; }}";
+  home.file.".vimrc".text = builtins.readFile "${builtins.path { path = ./vimrc; }}";
 }
