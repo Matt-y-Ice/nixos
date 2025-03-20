@@ -48,6 +48,9 @@
     ];
   };
 
+  # Set bash as the default shell
+  home.shell = pkgs.bash;
+
   programs.home-manager.enable = true;
 
   home.sessionVariables = {

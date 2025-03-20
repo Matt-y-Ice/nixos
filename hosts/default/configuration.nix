@@ -108,6 +108,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable and configure the firewall
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 22 80 443 ];
+    allowedUDPPorts = [ 53 ];
+  };
+
   # Enable the package manager and list system-level packages.
   environment.systemPackages = with pkgs; [
     vim
