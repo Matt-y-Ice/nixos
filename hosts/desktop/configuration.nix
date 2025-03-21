@@ -146,6 +146,12 @@
     usbutils
     spice
     cudatoolkit
+    vlc
+    mpv
+    ffmpeg
+    libva
+    vaapiVdpau
+    vdpauinfo
   ];
 
   # Enable Flatpak  
