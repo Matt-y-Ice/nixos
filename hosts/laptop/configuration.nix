@@ -126,6 +126,12 @@
     apostrophe
     direnv
     lorri
+    vlc
+    mpv
+    ffmpeg
+    libva
+    vaapiVdpau
+    vdpauinfo
   ];
 
   # Enable Flatpak  
