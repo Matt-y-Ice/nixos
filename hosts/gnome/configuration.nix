@@ -145,6 +145,7 @@
     bridge-utils
     usbutils
     spice
+    cudatoolkit
   ];
 
   # Enable Flatpak  
