@@ -38,6 +38,7 @@
     ocaml
     dune_3
     opam
+    libreoffice
   ];
 
   programs.vscode = {
