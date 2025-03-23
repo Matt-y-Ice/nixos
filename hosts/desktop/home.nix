@@ -35,6 +35,9 @@
     vscode
     nil
     code-cursor
+    ocaml
+    dune_3
+    opam
   ];
 
   programs.vscode = {
