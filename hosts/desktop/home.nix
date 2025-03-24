@@ -39,6 +39,8 @@
     dune_3
     opam
     libreoffice
+    bat
+    lsd
   ];
 
   programs.vscode = {
