@@ -126,6 +126,7 @@
     flatpak
     ptyxis
     podman
+    podman-desktop
     podman-compose
     docker
     docker-compose
