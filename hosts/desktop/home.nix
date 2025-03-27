@@ -63,4 +63,13 @@
 
   home.file.".bashrc".text = builtins.readFile "${builtins.path { path = ./dotfiles/bashrc; }}";
   home.file.".vimrc".text = builtins.readFile "${builtins.path { path = ./dotfiles/vimrc; }}";
+  home.file.".config/containers/policy.json".text = ''
+  {
+      "default": [
+          {
+              "type": "insecureAcceptAnything"
+          }
+      ]
+  }
+  '';
 }
