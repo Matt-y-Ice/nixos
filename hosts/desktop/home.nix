@@ -32,6 +32,7 @@
     materia-theme
     fastfetch
     brave
+    vivaldi
     vscode
     nil
     code-cursor
