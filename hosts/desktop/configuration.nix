@@ -164,25 +164,6 @@
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
 
-  environment.etc."containers/policy.json".text = ''
-  {
-    "default": [
-      {
-        "type": "insecureAcceptAnything"
-      }
-    ],
-    "transports": {
-      "docker-daemon": {
-        "": [
-          {
-            "type": "insecureAcceptAnything"
-          }
-        ]
-      }
-    }
-  }
-  '';
-
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
