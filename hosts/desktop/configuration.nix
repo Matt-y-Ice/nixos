@@ -128,7 +128,6 @@
     apostrophe
     direnv
     lorri
-    chromium
     # Virtualization packages
     qemu
     libvirt
@@ -161,7 +160,7 @@
 
   services.docker = {
   enable = true;
-  rootless = true; # Optional: Enable rootless mode
+  socketActivation = true;
   };
 
 }

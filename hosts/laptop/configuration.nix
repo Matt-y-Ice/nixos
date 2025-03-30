@@ -138,7 +138,7 @@
 
   services.docker = {
   enable = true;
-  rootless = true; # Optional: Enable rootless mode
+  socketActivation = true;
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
