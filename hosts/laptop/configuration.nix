@@ -136,6 +136,7 @@
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
 
+  virtualisation.docker.enable = true;
   systemd.services.docker = {
     enable = true;
   };

@@ -158,6 +158,7 @@
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  virtualisation.docker.enable = true;
   systemd.services.docker = {
     enable = true;
   };
