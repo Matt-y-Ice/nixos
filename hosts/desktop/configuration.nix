@@ -158,9 +158,9 @@
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
-  services.docker = {
-  enable = true;
-  socketActivation = true;
+  systemd.services.docker = {
+    enable = true;
+    socketActivation = true;
   };
 
 }

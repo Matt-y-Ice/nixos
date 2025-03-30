@@ -136,9 +136,9 @@
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
 
-  services.docker = {
-  enable = true;
-  socketActivation = true;
+  systemd.services.docker = {
+    enable = true;
+    socketActivation = true;
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
