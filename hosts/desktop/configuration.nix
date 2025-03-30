@@ -160,7 +160,6 @@
 
   systemd.services.docker = {
     enable = true;
-    socketActivation = true;
   };
 
 }
