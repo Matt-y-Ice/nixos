@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -113,10 +113,10 @@
     podman-desktop
     podman-compose
     docker
+    docker-desktop
     docker-compose
     git
     python312
-    apostrophe
     direnv
     lorri
     vlc
@@ -135,6 +135,11 @@
   
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
+
+  services.docker = {
+  enable = true;
+  rootless = true; # Optional: Enable rootless mode
+  };
 
   system.stateVersion = "24.11"; # Did you read the comment?
 

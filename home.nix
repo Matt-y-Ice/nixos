@@ -53,6 +53,20 @@
       ms-vscode-remote.vscode-remote-extensionpack
       ocamllabs.ocaml-platform
     ];
+    settings = {
+      "editor.inlineSuggest.suppressSuggestions" = true;
+      "cody.autocomplete.languages" = {
+        "*" = true;
+      };
+      "nix.formatterPath" = "nixfmt";
+      "nixEnvSelector.packages" = [];
+      "nix.enableLanguageServer" = true;
+      "explorer.confirmDragAndDrop" = false;
+      "git.enableSmartCommit" = true;
+      "workbench.colorTheme" = "Ayu Mirage Bordered";
+      "dev.containers.dockerPath" = "docker";
+      "dev.containers.dockerComposePath" = "docker-compose";
+    };
   };
 
   programs.home-manager.enable = true;

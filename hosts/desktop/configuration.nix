@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -84,7 +84,7 @@
   users.users.mattyice = {
     isNormalUser = true;
     description = "matty ice";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirt" "video" "audio" "input" ];
   };
 
   # Enable automatic login for the user.
@@ -121,6 +121,7 @@
     podman-desktop
     podman-compose
     docker
+    docker-desktop
     docker-compose
     git
     python312
@@ -157,5 +158,10 @@
   services.gnome.gnome-browser-connector.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
+
+  services.docker = {
+  enable = true;
+  rootless = true; # Optional: Enable rootless mode
+  };
 
 }
