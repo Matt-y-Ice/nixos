@@ -18,7 +18,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.mattyice = import ./hosts/desktop/home.nix;
+          home-manager.users.mattyice = import ./home.nix;
         }
       ];
     };
@@ -26,7 +26,7 @@
     homeConfigurations.mattyice = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./hosts/desktop/home.nix ];
+      modules = [ ./home.nix ];
     };
   };
 }
