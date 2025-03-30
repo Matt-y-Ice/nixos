@@ -121,7 +121,6 @@
     podman-desktop
     podman-compose
     docker
-    docker-desktop
     docker-compose
     git
     python312
