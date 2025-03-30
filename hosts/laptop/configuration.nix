@@ -135,25 +135,6 @@
     vdpauinfo
   ];
 
-  environment.etc."containers/policy.json".text = ''
-  {
-    "default": [
-      {
-        "type": "insecureAcceptAnything"
-      }
-    ],
-    "transports": {
-      "docker-daemon": {
-        "": [
-          {
-            "type": "insecureAcceptAnything"
-          }
-        ]
-      }
-    }
-  }
-  '';
-
   # Enable Flatpak  
   services.flatpak.enable = true; 
 
