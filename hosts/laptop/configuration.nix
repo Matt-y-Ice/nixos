@@ -81,7 +81,7 @@
 
   home-manager = {
     users = {
-      "mattyice" = import ./home.nix;
+      "mattyice" = import ../../home.nix;
     };
     useGlobalPkgs = true;
     useUserPackages = true;
