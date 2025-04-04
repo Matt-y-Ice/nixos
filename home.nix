@@ -42,6 +42,7 @@
     libreoffice
     bat
     lsd
+    gimp
   ];
 
   programs.vscode = {
