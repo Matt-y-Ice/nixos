@@ -1,16 +1,24 @@
-# Editor junk
+# Editor temp files
 *.swp
 *.swo
 *~
+*.bak
 
-# Nix garbage
+# Build outputs from nix or nixos-rebuild
 result
 result-*
 *.drv
+*.o
+*.so
+*.gcno
 
-# Logs
+# Flake backup/merge conflict junk
+flake.lock.backup
+*.lock.*
+*.orig
+.DS_Store
+
+# Logs or local temp config
 *.log
-
-# Symlinks or test build outputs
-/flake.lock.backup
-/build
+*.tmp
+.cache/
