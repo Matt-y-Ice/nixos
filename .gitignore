@@ -1,0 +1,16 @@
+# Editor junk
+*.swp
+*.swo
+*~
+
+# Nix garbage
+result
+result-*
+*.drv
+
+# Logs
+*.log
+
+# Symlinks or test build outputs
+/flake.lock.backup
+/build
