@@ -12,9 +12,10 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let 
       system = "x86_64-linux";
-      hostname = "nix-desktop";
+      hostname = builtins.readFile "/etc/hostname";
+      cleanedHostname = builtins.replaceStrings ["\n"] [""] hostname;
     in {
-      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${cleanedHostname} = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
