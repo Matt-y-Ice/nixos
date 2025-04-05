@@ -122,11 +122,6 @@
     podman-compose
     docker
     docker-compose
-    git
-    python312
-    apostrophe
-    direnv
-    lorri
     # Virtualization packages
     qemu
     libvirt
@@ -138,12 +133,6 @@
     usbutils
     spice
     cudatoolkit
-    vlc
-    mpv
-    ffmpeg
-    libva
-    vaapiVdpau
-    vdpauinfo
   ];
 
   # Enable Flatpak  
