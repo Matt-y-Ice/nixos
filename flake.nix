@@ -12,8 +12,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      hostname = builtins.getEnv "HOSTNAME";  # ← This only works with --impure
-      pkgs = import nixpkgs { inherit system; };
+      hostname = "nix-desktop";
     in {
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -32,5 +31,5 @@
         ];
       };
     };
-    
+
 }
