@@ -8,5 +8,4 @@ in {
 
   xdg.configFile."containers/policy.json".text =
     builtins.readFile (builtins.path { path = "${dotfiles}/policy.json"; });
-# test
 }
