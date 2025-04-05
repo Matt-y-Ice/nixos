@@ -18,10 +18,11 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.mattyice = {
-            imports = [ ./home/home.nix ];
-          };
-        }
+          imports = [ ./home/home.nix ];
+        };
+      }
       ];
     };
   };
