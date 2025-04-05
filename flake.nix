@@ -12,7 +12,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let 
       system = "x86_64-linux";
-      hostname = builtins.getEnv "HOSTNAME";
+      hostname = "nix-desktop";
     in {
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -31,5 +31,4 @@
         ];
       };
     };
-    
 }
