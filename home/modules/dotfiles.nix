@@ -1,9 +1,9 @@
-{ inputs, ... }:
+{ ... }:
 
 let
-  dotfiles = "${inputs.self}/home/dotfiles";
+  dotfiles = ./dotfiles;
 in {
-  home.file.".vimrc".text = builtins.readFile "${dotfiles}/vimrc";
-
-  xdg.configFile."containers/policy.json".text = builtins.readFile "${dotfiles}/policy.json";
+  home.file.".vimrc".text = builtins.readFile (builtins.path { path = "${dotfiles}/vimrc"; });
+  xdg.configFile."containers/policy.json".text = builtins.readFile (builtins.path { path = "${dotfiles}/containers/policy.json"; });
 }
+
