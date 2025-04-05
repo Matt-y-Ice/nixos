@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "NixOS config flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,14 +12,14 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      hostname = builtins.readFile ./hostname.nix;
-      cleanedHostname = builtins.replaceStrings ["\n"] [""] hostname;
+      hostname = builtins.getEnv "HOSTNAME";  # ← This only works with --impure
+      pkgs = import nixpkgs { inherit system; };
     in {
-      nixosConfigurations.${cleanedHostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/${cleanedHostname}/configuration.nix
+          ./hosts/${hostname}/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
