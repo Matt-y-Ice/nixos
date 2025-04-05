@@ -22,3 +22,6 @@ flake.lock.backup
 *.log
 *.tmp
 .cache/
+
+# hostname file
+hostname
