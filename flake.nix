@@ -12,7 +12,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      hostname = builtins.readFile ./hostname;
+      hostname = builtins.readFile ./hostname.nix;
       cleanedHostname = builtins.replaceStrings ["\n"] [""] hostname;
       pkgs = import nixpkgs { inherit system; };
     in {
