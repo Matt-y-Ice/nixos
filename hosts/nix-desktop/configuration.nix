@@ -4,14 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/boot.nix
-    #inputs.home-manager.nixosModules.home-manager
+    ./modules/networking.nix
   ];
-
-  networking.hostName = "nix-desktop"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -93,13 +87,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Enable and configure the firewall
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 22 80 443 ];
-    allowedUDPPorts = [ 53 ];
-  };
 
   # Enable the package manager and list system-level packages.
   environment.systemPackages = with pkgs; [
