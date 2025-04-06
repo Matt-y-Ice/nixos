@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  networking.hostname = "nix-desktop";
+  networking.hostName = "nix-desktop";
   networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
