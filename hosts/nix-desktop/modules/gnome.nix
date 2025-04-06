@@ -21,4 +21,6 @@
 
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
+
+  #services.xserver.libinput.enable = true;
 }
