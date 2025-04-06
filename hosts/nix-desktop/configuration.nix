@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./boot.nix
+    ./modules/boot.nix
     #inputs.home-manager.nixosModules.home-manager
   ];
 
