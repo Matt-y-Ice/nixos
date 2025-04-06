@@ -1,19 +1,11 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.home-manager
-    ];
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.device = "nodev";
+  imports = [
+    ./hardware-configuration.nix
+    ./boot.nix
+    #inputs.home-manager.nixosModules.home-manager
+  ];
 
   networking.hostName = "nix-desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -43,7 +35,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  
+
   # Configure NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
@@ -84,7 +76,8 @@
   users.users.mattyice = {
     isNormalUser = true;
     description = "matty ice";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirt" "video" "audio" "input" ];
+    extraGroups =
+      [ "networkmanager" "wheel" "docker" "libvirt" "video" "audio" "input" ];
   };
 
   # Enable automatic login for the user.
@@ -136,19 +129,17 @@
   ];
 
   # Enable Flatpak  
-  services.flatpak.enable = true; 
+  services.flatpak.enable = true;
 
   # Enable Lorri
   services.lorri.enable = true;
-  
+
   # Enable the GNOME Browser Integration.
   services.gnome.gnome-browser-connector.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
   virtualisation.docker.enable = true;
-  systemd.services.docker = {
-    enable = true;
-  };
+  systemd.services.docker = { enable = true; };
 
 }
