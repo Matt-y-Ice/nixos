@@ -8,16 +8,6 @@
     ./modules/general.nix
     ./modules/graphics.nix
   ];
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -40,15 +30,6 @@
     extraGroups =
       [ "networkmanager" "wheel" "docker" "libvirt" "video" "audio" "input" ];
   };
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "mattyice";
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -87,9 +68,6 @@
 
   # Enable Lorri
   services.lorri.enable = true;
-
-  # Enable the GNOME Browser Integration.
-  services.gnome.gnome-browser-connector.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
