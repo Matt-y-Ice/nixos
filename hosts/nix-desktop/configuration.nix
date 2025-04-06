@@ -7,6 +7,7 @@
     ./modules/networking.nix
     ./modules/general.nix
     ./modules/graphics.nix
+    ./modules/gnome.nix
   ];
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -63,8 +64,7 @@
     cudatoolkit
   ];
 
-  xdg.portal.enable = true;
-  # Enable Flatpak  
+  # Enable Flatpak
   services.flatpak.enable = true;
 
   # Enable Lorri
