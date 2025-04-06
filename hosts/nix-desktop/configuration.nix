@@ -6,19 +6,8 @@
     ./modules/boot.nix
     ./modules/networking.nix
     ./modules/general.nix
+    ./modules/graphics.nix
   ];
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Configure NVIDIA
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = true;
-    nvidiaSettings = true;
-  };
-
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
