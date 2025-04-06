@@ -63,6 +63,7 @@
     cudatoolkit
   ];
 
+  xdg.portal.enable = true;
   # Enable Flatpak  
   services.flatpak.enable = true;
 
