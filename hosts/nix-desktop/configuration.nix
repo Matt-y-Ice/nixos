@@ -5,25 +5,12 @@
     ./hardware-configuration.nix
     ./modules/boot.nix
     ./modules/networking.nix
-    ./modules/general.nix
+    ./modules/system.nix
     ./modules/graphics.nix
     ./modules/gnome.nix
     ./modules/audio.nix
+    ./modules/users.nix
   ];
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mattyice = {
-    isNormalUser = true;
-    description = "matty ice";
-    extraGroups =
-      [ "networkmanager" "wheel" "docker" "libvirt" "video" "audio" "input" ];
-  };
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

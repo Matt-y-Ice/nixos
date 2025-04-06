@@ -20,4 +20,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  system.stateVersion = "24.11";
+
+  virtualisation.docker.enable = true;
+  systemd.services.docker = { enable = true; };
 }
