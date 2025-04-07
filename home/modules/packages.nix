@@ -16,7 +16,7 @@
 
     # GUI apps
     protonmail-desktop vesktop brave vivaldi libreoffice gimp
-    code-cursor apostrophe sublime-merge sublime4
+    code-cursor apostrophe
 
     # GNOME customization
     gnome-tweaks
