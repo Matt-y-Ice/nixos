@@ -16,7 +16,7 @@
 
     # GUI apps
     protonmail-desktop vesktop brave vivaldi libreoffice gimp
-    code-cursor apostrophe
+    code-cursor apostrophe sublime-merge sublime4
 
     # GNOME customization
     gnome-tweaks
@@ -27,7 +27,7 @@
     ocaml dune_3 opam
 
     # Terminal tools
-    starship fastfetch bat lsd tmux ptyxis fish yazi
+    fastfetch bat lsd tmux ptyxis fish yazi
 
     # Misc tools
     deja-dup

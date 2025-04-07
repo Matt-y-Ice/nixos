@@ -13,10 +13,12 @@
   };
 
   programs.starship.enable = true;
+  programs.fish.enable = true;
 
   programs.direnv = {
     enable = true;
     enableBashIntegration = true;
+    enableFishIntegration = true;
   };
 }
 
