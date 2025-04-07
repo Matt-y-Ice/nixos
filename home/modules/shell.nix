@@ -14,7 +14,7 @@
 
   programs.fish = {
     enable = true;
-    prompt.init = ''
+    promptInit = ''
       starship init fish | source
     '';
     shellAliases = {
