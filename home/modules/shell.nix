@@ -12,7 +12,6 @@
     gs = "git status";
   };
 
-  programs.starship.enable = true;
   programs.fish = {
     enable = true;
     prompt.init = ''
