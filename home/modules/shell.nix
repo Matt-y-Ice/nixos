@@ -13,7 +13,18 @@
   };
 
   programs.starship.enable = true;
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    prompt.init = ''
+      starship init fish | source
+    '';
+    shellAliases = {
+      ls = "lsd";
+      cat = "bat";
+      ll = "ls -l";
+      gs = "git status";
+    };
+  };
 
   programs.direnv = {
     enable = true;
