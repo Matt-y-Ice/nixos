@@ -14,15 +14,9 @@
 
   programs.fish = {
     enable = true;
-    promptInit = ''
+    interactiveShellInit = ''
       starship init fish | source
     '';
-    shellAliases = {
-      ls = "lsd";
-      cat = "bat";
-      ll = "ls -l";
-      gs = "git status";
-    };
   };
 
   programs.direnv = {
