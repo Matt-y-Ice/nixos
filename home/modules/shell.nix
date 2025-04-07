@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  programs.bash = {
+  programs.starship.enable = true;
+  programs.fish = {
     enable = true;
     shellAliases = {
       ls = "lsd";
@@ -9,11 +10,6 @@
       ll = "ls -l";
       gs = "git status";
     };
-  };
-
-  programs.starship.enable = true;
-
-  programs.fish = {
     interactiveShellInit = ''
       starship init fish | source
     '';
