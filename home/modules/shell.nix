@@ -16,9 +16,13 @@
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = ''
-      starship init fish | source
-    '';
+    shellInit = ''
+      # This is a workaround for fish not sourcing the starship init script
+      # correctly when using home-manager.
+      set -gx STARSHIP_CONFIG ~/.config/starship.toml
+      set -gx STARSHIP_SHELL fish
+      set -gx STARSHIP_SHELL_PATH $PATH
+      '';
   };
 
   programs.direnv = {
