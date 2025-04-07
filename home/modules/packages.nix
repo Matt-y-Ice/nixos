@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     # Dev tools
     fd ripgrep unzip gnutls pandoc shellcheck nixfmt-classic shfmt
-    emacs nil nodejs git python312 direnv lorri
+    emacs nil nodejs python312 direnv lorri
 
     # Media tools
     mpv ffmpeg libva vaapiVdpau vdpauinfo vlc
@@ -42,5 +42,16 @@
       ms-vscode-remote.vscode-remote-extensionpack
       ocamllabs.ocaml-platform
     ];
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Matty Ice";
+    userEmail = "matty_ice_2011@pm.me";
+    config = {
+      init = { defaultBranch = "main"; };
+      core = { editor = "${pkgs.vim}/bin/vim"; };
+      color = { ui = "auto"; };
+    };
   };
 }
