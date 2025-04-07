@@ -51,7 +51,6 @@
     config = {
       init = { defaultBranch = "main"; };
       core = { editor = "${pkgs.vim}/bin/vim"; };
-      color = { ui = "auto"; };
     };
   };
 }
