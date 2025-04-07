@@ -12,7 +12,7 @@
     gs = "git status";
   };
 
-  programs.startship.enable = true;
+  programs.starship.enable = true;
 
   programs.fish = {
     enable = true;
