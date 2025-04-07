@@ -27,7 +27,7 @@
     ocaml dune_3 opam
 
     # Terminal tools
-    starship fastfetch bat lsd tmux ptyxis
+    starship fastfetch bat lsd tmux ptyxis fish yazi
 
     # Misc tools
     deja-dup
