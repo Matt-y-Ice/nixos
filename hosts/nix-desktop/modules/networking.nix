@@ -8,4 +8,10 @@
     allowedTCPPorts = [ 22 80 443 ];
     allowedUDPPorts = [ 53 ];
   };
+  networking.wg-quick.interfaces = {
+    w0 = {
+      configFile = "/etc/wireguard/w0.conf";
+      autoStart = true;
+    };
+  };
 }
