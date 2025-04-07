@@ -48,9 +48,5 @@
     enable = true;
     userName = "Matty Ice";
     userEmail = "matty_ice_2011@pm.me";
-    config = {
-      init = { defaultBranch = "main"; };
-      core = { editor = "${pkgs.vim}/bin/vim"; };
-    };
   };
 }
