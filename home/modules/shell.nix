@@ -1,17 +1,14 @@
 { pkgs, ... }:
 
 {
-  users.defaultUserShell = pkgs.fish;
-
-  home.sessionVariables = {
-    PATH = "~/.config/emacs/bin:$PATH";
-  };
-
-  home.shellAliases = {
-    ls = "lsd";
-    cat = "bat";
-    ll = "ls -l";
-    gs = "git status";
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      ls = "lsd";
+      cat = "bat";
+      ll = "ls -l";
+      gs = "git status";
+    };
   };
 
   programs.starship.enable = true;
