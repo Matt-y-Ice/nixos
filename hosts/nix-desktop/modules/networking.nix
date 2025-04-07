@@ -11,7 +11,7 @@
   networking.wg-quick.interfaces = {
     w0 = {
       configFile = "/etc/wireguard/w0.conf";
-      autoStart = true;
+      autostart = true;
     };
   };
 }
