@@ -1,6 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  users.defaultUserShell = pkgs.fish;
+
   home.sessionVariables = {
     PATH = "~/.config/emacs/bin:$PATH";
   };
@@ -16,13 +18,9 @@
 
   programs.fish = {
     enable = true;
-    shellInit = ''
-      # This is a workaround for fish not sourcing the starship init script
-      # correctly when using home-manager.
-      set -gx STARSHIP_CONFIG ~/.config/starship.toml
-      set -gx STARSHIP_SHELL fish
-      set -gx STARSHIP_SHELL_PATH $PATH
-      '';
+    interactiveShellInit = ''
+      starship init fish | source
+    '';
   };
 
   programs.direnv = {
