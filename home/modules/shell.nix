@@ -15,6 +15,17 @@
     '';
   };
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+    VISUAL = "vim";
+    PAGER = "bat";
+  };
+
+  home.sessionPath = [
+    "$HOME/.config/emacs/bin"
+    "$HOME/.local/bin"
+  ];
+
   programs.direnv = {
     enable = true;
   };
