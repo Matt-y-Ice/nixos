@@ -26,6 +26,9 @@
     # OCaml dev
     ocaml dune_3 opam
 
+    # Haskell dev
+    ghc cabal-install haskellPackages.lsp
+
     # Terminal tools
     fastfetch bat lsd tmux ptyxis yazi
 
