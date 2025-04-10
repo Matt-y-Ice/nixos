@@ -29,6 +29,9 @@
     # Haskell dev
     ghc cabal-install haskellPackages.lsp
 
+    # Scheme dev
+    mitscheme
+
     # Terminal tools
     fastfetch bat lsd tmux ptyxis yazi
 
