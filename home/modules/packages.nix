@@ -51,6 +51,12 @@
     ];
   };
 
+  programs.emacs = {
+    extraPackages = epkgs: [
+      pkgs.mu
+    ];
+  };
+
   # Git Config
   programs.git = {
     enable = true;
