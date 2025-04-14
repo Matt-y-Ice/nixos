@@ -37,7 +37,7 @@
     fastfetch bat lsd tmux ptyxis yazi
 
     # Misc tools
-    deja-dup
+    deja-dup isync mu
   ];
 
   programs.vscode = {
