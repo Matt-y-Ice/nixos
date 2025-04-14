@@ -15,12 +15,13 @@
     nerd-fonts.hack
 
     # GUI apps
-    protonmail-desktop vesktop brave vivaldi libreoffice gimp
-    code-cursor apostrophe
+    protonmail-bridge-gui protonmail-desktop vesktop brave vivaldi libreoffice
+    code-cursor apostrophe chromium gimp
 
     # GNOME customization
     gnome-tweaks
     gnomeExtensions.user-themes
+    gnomeExtensions.proton-bridge-button
     graphite-gtk-theme orchis-theme materia-theme
 
     # OCaml dev
@@ -50,6 +51,7 @@
     ];
   };
 
+  # Git Config
   programs.git = {
     enable = true;
     userName = "Matty Ice";
