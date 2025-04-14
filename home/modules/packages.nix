@@ -53,7 +53,7 @@
 
   programs.emacs = {
     extraPackages = epkgs: [
-      pkgs.mu
+      pkgs.mu4e
     ];
   };
 
