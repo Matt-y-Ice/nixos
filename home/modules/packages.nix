@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     # Dev tools
     fd ripgrep unzip gnutls pandoc shellcheck nixfmt-classic shfmt
-    emacs nil nodejs python312 direnv lorri cmake
+    emacs emacsPackages.vterm nil nodejs python312 direnv lorri cmake gcc gdb
 
     # Media tools
     mpv ffmpeg libva vaapiVdpau vdpauinfo vlc
