@@ -31,7 +31,7 @@
     ghc cabal-install haskellPackages.lsp
 
     # Scheme dev
-    mitscheme
+    mitscheme guile
 
     # Terminal tools
     fastfetch bat lsd tmux ptyxis yazi
