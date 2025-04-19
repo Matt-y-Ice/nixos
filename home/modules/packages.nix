@@ -15,7 +15,7 @@
     nerd-fonts.hack
 
     # GUI apps
-    protonmail-bridge protonmail-desktop vesktop brave vivaldi libreoffice
+    protonmail-desktop vesktop brave vivaldi libreoffice
     code-cursor apostrophe chromium gimp
 
     # GNOME customization
